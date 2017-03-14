@@ -1,0 +1,12 @@
+{
+    "name": "steveschoger/jigsaw-steveschoger",
+    "authors": [
+        {
+            "name": "Steve Schoger",
+            "email": "stm.schoger@gmail.com"
+        }
+    ],
+    "require": {
+        "tightenco/jigsaw": "dev-master"
+    }
+}

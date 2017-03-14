@@ -1,0 +1,238 @@
+@import "reset";
+
+@import "spacing";
+
+$font-size-xxjumbo: (64 / 16)+rem; // 64px
+$font-size-xjumbo: (45 / 16)+rem; // 45px
+$font-size-jumbo: (36 / 16)+rem; // 36px
+$font-size-xxl: (24 / 16)+rem; // 24px
+$font-size-xl: (20 / 16)+rem; // 20px
+$font-size-lg: (18 / 16)+rem; // 18px
+$font-size-base: 1rem; // 16px
+$font-size-sm: (14 / 16)+rem; // 14px
+$font-size-xs: (12 / 16)+rem; // 12px
+
+.font-size-xxjumbo { font-size: $font-size-xxjumbo; }
+.font-size-xjumbo { font-size: $font-size-xjumbo; }
+.font-size-jumbo { font-size: $font-size-jumbo; }
+.font-size-xxl { font-size: $font-size-xxl; }
+.font-size-xl { font-size: $font-size-xl; }
+.font-size-lg { font-size: $font-size-lg; }
+.font-size-base { font-size: $font-size-base; }
+.font-size-sm { font-size: $font-size-sm; }
+.font-size-xs { font-size: $font-size-xs; }
+
+$sans-book: 'ITC Franklin Gothic LT W01 Bk'; 
+$sans-bold: 'ITC Franklin Gothic LT W01 Dm'; 
+$sans-italic: 'ITC Franklin Gothic LT W01 Md';
+
+$serif-book: 'FreightText W01 Book';
+$serif-italic: 'FreightText W01 Book Italic';
+
+
+.sans-book { font-family: $sans-book; }
+.sans-bold { font-family: $sans-bold; }
+.sans-italic { font-family: $sans-italic; }
+
+.serif-book { font-family: $serif-book; }
+.serif-italic { font-family: $serif-italic; }
+
+$text-gray-lighter: #aeaeae;
+$text-gray-light: #7C7C7C;
+$text-gray: #4f4f4f;
+$text-gray-dark: #232323;
+
+.text-gray-lighter{ color: $text-gray-lighter;}
+.text-gray-light{ color: $text-gray-light;}
+.text-gray{ color: $text-gray;}
+.text-gray-dark{ color: $text-gray-dark;}
+
+.no-line-height { line-height: 1; }
+
+
+body {
+  font-family:'ITC Franklin Gothic LT W01 Bk', -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+  line-height: 24px;
+  background: #f7f7f7;
+  font-size: 16px; 
+  -webkit-font-smoothing: antialiased;
+  -webkit-text-shadow: rgba(0,0,0,.01) 0 0 1px;
+  text-shadow: rgba(0,0,0,.01) 0 0 1px;
+  }
+
+h1, h2, h3, h4{
+    color: $text-gray-dark;
+    margin-bottom: 0.75em;
+  }
+
+h1{font-size: $font-size-xxl;}
+h2{font-size: $font-size-xl;}
+h3{font-size: $font-size-lg;}
+h4{font-size: $font-size-base;}
+
+.main-wrapper {
+  box-shadow: inset 0 -20px 0 #fff,inset 20px 0 0 #fff,inset -20px 0 0 #fff;
+  min-height: 100vh;
+  min-width: 100%; }
+
+.container {
+  max-width: 580px;
+  padding: 4rem 2rem 6rem 18%; }
+
+.constrain-lg{
+  max-width: 580px;
+  padding: 4rem 2rem 6rem 18%; }
+
+.top-border {
+  box-shadow: inset 0 20px 0 #fff;
+  height: 20px; }
+
+.logo {
+  margin-bottom: 3rem;
+  margin-top: 2rem;
+}
+
+.svg-logo {
+  fill: #4483D9; }
+
+.icon-link {
+  fill: #4483D9; }
+
+ul.projects svg {
+  padding-bottom: 2px;
+  margin-left: 8px; }
+
+p, li{
+  font-family: $sans-book;
+  margin-top: 0;
+  font-weight: 400;
+  line-height: 1.6;
+  margin-bottom: 1rem;
+  color: $text-gray;
+  font-size: $font-size-lg;
+  }
+
+a {
+  color: #4483D9;
+  text-decoration: none;
+  font-weight: 400; }
+
+a:hover {
+  text-decoration: underline; }
+
+.no-list-style {
+  list-style: none; }
+
+.projects-title {
+  font-size: $font-size-lg;
+  color: $text-gray-dark;
+  font-family: $sans-book;
+   }
+
+.line-seperator {
+  background-color: $text-gray-dark;
+  height: 1px;
+  width: 40px;}
+
+ul.social li {
+  display: inline-block;
+  margin-right: 20px; }
+
+
+.social-icon {
+  fill: #4f4f4f; }
+
+a .social-icon:hover {
+  fill: #6d6d6d; }
+
+.markdown {
+  p, li{
+  font-family: $sans-book;
+  margin-top: 0;
+  margin-bottom: 1.5em;
+  font-weight: 400;
+  line-height: 1.6;
+  color: $text-gray-light;
+  font-size: $font-size-lg;
+  }
+
+  a {
+    color: #4483D9;
+  text-decoration: none;
+  font-weight: 400; }
+
+  a:hover {
+    text-decoration: underline; }
+
+  pre {
+    background: none;
+    margin-bottom: 1.5rem;
+    padding: 0;
+    font-size: 0.75rem;
+    position: relative;
+    overflow-y: hidden;
+  }
+
+  pre > code {
+    background-color: #efefef;
+    line-height: 1.75;
+    padding: 1.5em 2em;
+  }
+
+  code{
+  font-family: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, Courier, monospace;
+  font-size: $font-size-sm;
+  white-space: pre;
+  overflow-x: auto;
+  display: block;
+  }
+
+  hr{
+    margin-bottom: 1.5em;
+    background-color: #aeaeae;
+    height: 1px;
+    border-width:0;
+    max-width: 100px;
+    text-align: left;
+    margin-left: 0;
+  }
+  
+  img{
+    max-width: 100%;
+  }
+
+
+}
+
+@media (max-width: 768px) { 
+li {
+    list-style-position: inside;
+}
+
+.container {
+  padding: 3em }
+
+.constrain-lg{
+  padding: 3em }
+
+  }
+
+
+  
+@media (max-width: 415px) { 
+	
+.container {
+  padding: 30px }
+
+.constrain-lg {
+  padding: 30px }
+  
+.main-wrapper {
+  box-shadow: inset 0 -10px 0 #fff,inset 10px 0 0 #fff,inset -10px 0 0 #fff;}
+  
+  .top-border {
+  box-shadow: inset 0 10px 0 #fff;
+  height: 10px; }
+	
+	}
+
