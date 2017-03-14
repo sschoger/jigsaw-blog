@@ -7,8 +7,6 @@ date: 2017-03-13
 ---
 
 
-Test
-
 The more I work with SVG icons the stronger I believe that inline SVG is the best approach for implementing them. The primary reason for this is that inline SVG is currently the best option if you want to style your icons using an external stylesheet. There are 2 major advantages to this:
 
 
