@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <link rel="stylesheet" href="/css/main.css">
+        <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.9.0/styles/default.min.css">
+        <link type="text/css" rel="stylesheet" href="//fast.fonts.net/cssapi/10f37207-0e28-4555-b7b4-e70a13d03463.css"/>
+    </head>
+    <body>
+        <div class="main-wrapper">
+<div class="top-border"></div>
+    <div class="constrain constrain-lg">
+    <div class="logo">
+        <a href="/">
+            <svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 64 64">
+                <path class="svg-logo" d="M32 64a32 32 0 1 1 0-64 32 32 0 0 1 0 64zm0-2a30 30 0 1 0 0-60 30 30 0 0 0 0 60zm-9-22h18a5 5 0 0 0 4-2 5 5 0 0 0-4-2H23a7 7 0 0 1-6.33-10A7 7 0 0 1 23 16h25v1a7 7 0 0 1-7 7H23a5 5 0 0 0-4 2 5 5 0 0 0 4 2h18a7 7 0 0 1 6.33 10A7 7 0 0 1 41 48H16v-1a7 7 0 0 1 7-7zm-4.97-11.5A5 5 0 0 0 23 34h18c1.9 0 3.64.76 4.9 2a5.02 5.02 0 0 0-4.9-6H23c-1.9 0-3.64-.76-4.9-2a5 5 0 0 0-.07.5zM41 42H23a5 5 0 0 0-4.9 4H41a5 5 0 0 0 4.9-6c-1.26 1.24-3 2-4.9 2zM23 22h18a5 5 0 0 0 4.9-4H23a5 5 0 0 0-4.9 6c1.26-1.24 3-2 4.9-2z"></path>
+            </svg>
+        </a>
+    </div>
+    <article>
+        <header>
+            <aside class="no-line-height">
+                <p class="text-sm sans-book text-gray-lighter m-xs-b-2">
+                    March 14, 2017
+                </p>
+            </aside>
+            <h1 class="font-size-xxl sans-book text-gray-dark no-line-height m-xs-b-6">Using SVG icons with external stylesheets</h1>
+        </header>
+        <div class="markdown js-blog-post-body">
+            <p>The more I work with SVG icons the stronger I believe that inline SVG is the best approach for implementing them. The primary reason for this is that inline SVG is currently the best option if you want to style your icons using an external stylesheet. There are 2 major advantages to this:</p>
+<ol>
+<li>You get far more control over the style of the icons, opening the door to much more creative possibilities</li>
+<li>It keeps the style of your icons together with the style of the rest of your site allowing you to reuse code, especially if you’re using a CSS compiler. </li>
+</ol>
+<p>Let’s put this into practice: </p>
+<p>Say you have a set of SVG icons, each with multiple paths and you want match the color palette to the rest of the site that you are working on. Including them I’m the same CSS would be far more efficient, especially if you’re designing in code and making frequent changes to find just the right color palette. Fortunately, achieving this can be quite simple. </p>
+<p>Have a look at the example icon below from my <a href="http://www.heroicons.com">Heroicons</a> set. As you can see, the icon has multiple paths for different components of the icon. When you export this icon to a SVG, each path is preserved in the code so you can style them individually. Layers are ordered in the code as they are in your graphical editing tool; the top layer should be the last path in the SVG code. In this example, the last path would be the dark outline of the house.</p>
+<p><img src="/img/using-svg-icons-with-external-stylesheets/01-multiple-paths.png" alt="Icon with multiple paths" /> </p>
+<p>Depending on how you created the icons your SVG code may contain a few different properties: fill, fill-opacity, stroke, stroke-width, etc. If your using Sketch (like me) and have installed the <a href="https://www.sketchapp.com/extensions/plugins/svgo-compressor/">SVGO plugin</a> (you should) your code for each path might look something like this:</p>
+<pre><code class="language-xml">&lt;svg xmlns="http://www.w3.org/2000/svg" width="100px" height="100px" viewBox="0 0 100 100" class="heroicon-home heroicon heroicon-lg"&gt;
+    &lt;g fill-rule="evenodd"&gt;
+        &lt;polygon fill="#F2F3D8" points="7 7 44.5 7 50 1.5 55 7 93 7 93 44 99 50 96 53 50 7 4 53 1 50 7 44" /&gt;
+        &lt;path fill="#7ACFC0" d="M8 50L50 8l42 42v48H8V50zm10 7h12v22H18V57zm52 0h12v22H70V57zM50 38a8 8 0 1 0 0-16 8 8 0 0 0 0 16z" /&gt;
+        &lt;path fill="#A8C0BC" d="M84 79V55H68v24h-2v4h20v-4h-2zm-52 0V55H16v24h-2v4h20v-4h-2zm8-24h20v36H40V55zm10-16a9 9 0 1 0 0-18 9 9 0 0 0 0 18zm2-12v-3.71A7.01 7.01 0 0 1 56.71 28H52v-1zm-8.71 1A7.01 7.01 0 0 1 48 23.29V28h-4.71zM48 36.71A7.01 7.01 0 0 1 43.29 32H48v4.71zM56.71 32A7.01 7.01 0 0 1 52 36.71V32h4.71zM18 57h12v22H18V57zm52 0h12v22H70V57z" /&gt;
+        &lt;rect fill="#DB6566" width="16" height="34" x="42" y="57" /&gt;
+        &lt;path fill="#DFF6F9" d="M52 27v-3.71A7.01 7.01 0 0 1 56.71 28H52v-1zm-8.71 1A7.01 7.01 0 0 1 48 23.29V28h-4.71zM48 36.71A7.01 7.01 0 0 1 43.29 32H48v4.71zM56.71 32A7.01 7.01 0 0 1 52 36.71V32h4.71zM18 57h12v22H18V57zm52 0h12v22H70V57z" /&gt;
+        &lt;polygon fill="#EFF3F2" points="93 90 7 90 7 99 93 99" /&gt;
+        &lt;path fill="#000000" opacity=".2" d="M7 50L50 7l43 43v6L50 13 7 56v-6zm7 33h20v2H14v-2zm52 0h20v2H66v-2z" /&gt;
+        &lt;path fill="#434747" d="M94 98V52l.59.59L96 54l1.41-1.41 1.18-1.18L100 50l-1.41-1.41L94 44V6H56l-4.59-4.59L50 0l-1.41 1.41L44 6H6v38l-4.59 4.59L0 50l1.41 1.41L2.6 52.6 4 54l1.41-1.41L6 52v46H0v2h100v-2h-6zM58 30a8.02 8.02 0 0 0-10-7.75 8.01 8.01 0 0 0 4 15.5A8.01 8.01 0 0 0 58 30zm-10-1h1v-5.93a7.06 7.06 0 0 1 2 0V29h5.93a7.06 7.06 0 0 1 0 2H51v5.93a7.06 7.06 0 0 1-2 0V31h-5.93a7.06 7.06 0 0 1 0-2H48zm4-2v-3.71A7.01 7.01 0 0 1 56.71 28H52v-1zm-8.71 1A7.01 7.01 0 0 1 48 23.29V28h-4.71zM48 36.71A7.01 7.01 0 0 1 43.29 32H48v4.71zM56.71 32A7.01 7.01 0 0 1 52 36.71V32h4.71zM50 40a10 10 0 1 0 0-20 10 10 0 0 0 0 20zm9-10a9 9 0 1 1-18 0 9 9 0 0 1 18 0zM16 56v23h-2v4h20v-4h-2V55H16v1zm15 0H17v23h1V57h12v22h1V56zm-2 23H19V69h10v10zM19 68h10V58H19v10zm14 12H15v2h18v-2zm35-24v23h-2v4h20v-4h-2V55H68v1zm1 0v23h1V57h12v22h1V56H69zm2 23V69h10v10H71zm10-11V58H71v10h10zM67 80v2h18v-2H67zm-21.5-4a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3zM49 60v1h-3v10h-1V60h4zm6 0v1h-3v10h-1V60h4zm0 18v1h-9v8h-1v-9h10zm30-35L51.41 9.41 50 8l-1.41 1.41L15 43h70zm-71 1l-1 1h74l-1-1H14zM8 90V50l4-4h76l4 4v40H60V55H40v35H8zm55 1v3h3v4h26v-7H63zM8 98v-7h29v3h-3v4H8zm28 0h28v-2H36v2zm23-8h-1V57H42v33h-1V56h18v34zm-16 0V58h14v32H43zm18 4v-2H39v2h22zM58 8l3 3h7V9h1v2h4v1H62l7 7h7v-2h1v2h7v1H70l7 7h7v-2h1v2h2v1h-9l14 14V32h-8v-1h4v-2h1v2h3v-7h-7v-1h3v-2h1v2h3v-7H77v-1h3v-2h1v2h11v-3h-9v-1h1V9h1v2h7V8H58zM8 8h34l-3 3h-3V9h-1v2h-3v1h6L23 27h-3v-2h-1v2h-9v1h12L8 42V32h8v-3h-1v2H8v-7h8v-3h-1v2H8v-3h16v-1h-4v-2h-1v2H8v-3h22v-1H16v-2h-1v2H8v-3h12v-1h-8V9h-1v2H8V8zM4 51.17L48.59 6.6 50 5.17l1.41 1.42L96 51.17 97.17 50 50 2.83 2.83 50 4 51.17z" /&gt;
+    &lt;/g&gt;
+&lt;/svg&gt;</code></pre>
+<p>To make this work with an external stylesheet you’ll need to give each path a class name. Now add all of the properties to your CSS file and remove them from the SVG code. It's important that you remove the colors in the SVG code or else you will not be able to overide them in CSS. </p>
+<h3>SVG</h3>
+<pre><code class="language-xml">&lt;polygon class="heroicon-component-accent" ... /&gt; &lt;!-- Roof  --&gt;
+&lt;path class="heroicon-component-fill" ... /&gt; &lt;!-- Wall --&gt;
+&lt;path class="heroicon-component-accent" ... /&gt; &lt;!-- Frames --&gt;
+&lt;rect class="heroicon-component-accent" ... /&gt; &lt;!-- Door --&gt;
+&lt;path class="heroicon-component-fill" ... /&gt; &lt;!-- Windows --&gt;
+&lt;polygon class="heroicon-component-fill" ... /&gt; &lt;!-- Parging --&gt;
+&lt;path class="heroicon-shadows" ... /&gt; &lt;!-- Shadows --&gt;
+&lt;path class="heroicon-outline" ... /&gt; &lt;!-- Outline --&gt;</code></pre>
+<h3>CSS</h3>
+<pre><code class="language-css">.heroicon-outline {fill:#626262;}
+.heroicon-component-fill {fill:white;}
+.heroicon-component-accent {fill:#7ACFC0;}
+.heroicon-shadows {fill:#626262; opacity:0.4; }</code></pre>
+<p>Have a look at the results:</p>
+<p><img src="/img/using-svg-icons-with-external-stylesheets/02-color-results.png" alt="Icon with accent colors" /></p>
+<p>This approach gives you much more creative freedom and enables you with easily align your icons to your visual identity as it evolves. Take this concept even further by adding hover states, animations and gradients to create a better emotional experience for your users.  </p>
+<hr />
+<p>If you like the icon used in the article, you can it, along with many others, <a href="http://www.heroicons.com">here</a>. </p>        </div>
+    </article>
+    <div class="m-xs-b-6">
+        <div class="font-size-lg">
+            <a href="/" class="inline-block sans-book">Go back to home</a>
+        </div>
+    </div>
+    </div>
+</div>
+    </body>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.9.0/highlight.min.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+</html>
