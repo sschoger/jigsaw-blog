@@ -3,7 +3,7 @@ extends: _layouts.post
 section: post
 title: "Using SVG icons with external stylesheets"
 author: Steve Schoger
-date: 2017-03-14
+date: 2017-03-13
 ---
 
 
