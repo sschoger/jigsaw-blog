@@ -6,6 +6,6 @@
         "yargs": "^4.6.0"
     },
     "scripts": {
-        "deploy": "gulp --production --env=production && git add build_production && git commit -m 'Build for production' && git subtree push --prefix build_production origin gh-pages"
+        "deploy": "gulp --production --env=production && git add build_production && git commit --allow-empty -m 'Build for production' && git push origin `git subtree split --prefix build_production master`:gh-pages --force"
     }
 }
