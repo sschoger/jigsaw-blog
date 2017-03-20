@@ -39,7 +39,7 @@ To fix this issue, you’ll need to expand the shapes in your layer list and reo
 
 ![Reorder layers](/img/exporting-svg-icons-in-sketch/03-rearrange-layers.gif)
 
-Now you’re ready to export. If you don’t already use the [SVGO plugin](https://www.sketchapp.com/extensions/plugins/svgo-compressor/), head over to the [Sketch extensions](https://www.sketchapp.com/extensions/) page and get it. This will clean up for SVG substantially. 
+Now you’re ready to export. If you don’t already use the [SVGO plugin](https://www.sketchapp.com/extensions/plugins/svgo-compressor/), head over to the [Sketch extensions](https://www.sketchapp.com/extensions/) page and get it. This will clean up your SVG substantially. 
 
 Open the SVG file in your editor to make sure your have the expected results. The default settings for the SVGO plugin removes the width and height which I like to keep.  I also like to include the full close tags on the paths so it doesn’t interfere with the auto-close tags later on in my code. Here is what the results look like using the example icon above: 
 
@@ -51,4 +51,4 @@ Open the SVG file in your editor to make sure your have the expected results. Th
 
 ---
 
-If you like the icon used in the article, you can it, along with many others, [here](http://www.heroicons.com). 
+If you like the icon used in the article, you can get it, along with many others, [here](http://www.heroicons.com). 
