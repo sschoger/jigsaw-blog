@@ -38,7 +38,7 @@
 <p>Once all of the shapes are merged, you’ll want to bring them back into Sketch because exporting SVG from Figma doesn’t give you the cleanest results. </p>
 <p>If you’re using the latest version of Sketch (42) and depending on the shape and how your drew it, you may notice when you import your icon, that it is broken once again as some areas maybe filled in like this:</p>
 <p><img src="/img/exporting-svg-icons-in-sketch/02-sketch-import-results.png" alt="Sketch import results" /></p>
-<p>This is happening because of the fill-rule used on the icon. The fill-rule is a property used in SVG that determines what paths of the icon are subtracted or filled from the shape. There are 2 types of fill-rules that you will need to know about: even-odd and non-zero.</p>
+<p>This is happening because of the fill-rule used on the icon. The fill-rule is a property used in SVG that evaluates what paths of the icon are subtracted or filled from the shape. There are 2 types of fill-rules that you will need to know about: even-odd and non-zero.</p>
 <p>Even-odd counts the amount of paths from the outside to the centre of the shape. Starting from zero, if the path is an even number, it gets filled. If the path is an odd number, it gets subtracted. </p>
 <p>Non-zero fills any path that is drawn left to right (clockwise) and subtracts any path that is drawn from right to left (counter clockwise). </p>
 <p>Since the release of Sketch 42, it now uses the non-zero rule by default. In Sketch, you can easily switch to use the even-odd rule by clicking the Cog icon beside Fills in the Inspector. </p>
