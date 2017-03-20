@@ -23,7 +23,7 @@ If you’re using the latest version of Sketch (42) and depending on the shape a
 
 ![Sketch import results](/img/exporting-svg-icons-in-sketch/02-sketch-import-results.png)
 
-This is happening because of the fill-rule used on the icon. The fill-rule is a property used in SVG that determines what paths of the icon are subtracted or filled from the shape. There are 2 types of fill-rules that you will need to know about: even-odd and non-zero.
+This is happening because of the fill-rule used on the icon. The fill-rule is a property used in SVG that evaluates what paths of the icon are subtracted or filled from the shape. There are 2 types of fill-rules that you will need to know about: even-odd and non-zero.
 
 Even-odd counts the amount of paths from the outside to the centre of the shape. Starting from zero, if the path is an even number, it gets filled. If the path is an odd number, it gets subtracted. 
 
