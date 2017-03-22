@@ -19,23 +19,23 @@ For this reason you’ll need to get out of Sketch to get the expected results. 
 
 Once all of the shapes are merged, you’ll want to bring them back into Sketch because exporting SVG from Figma doesn’t give you the cleanest results. 
 
-If you’re using the latest version of Sketch (42) and depending on the shape and how your drew it, you may notice when you import your icon, that it is broken once again as some areas maybe filled in like this:
+If you’re using the latest version of Sketch (42) and depending on the shape and how your drew it, you may notice when you import your icon, some areas maybe filled in like this:
 
 ![Sketch import results](/img/exporting-svg-icons-in-sketch/02-sketch-import-results.png)
 
-This is happening because of the fill-rule used on the icon. The fill-rule is a property used in SVG that evaluates what paths of the icon are subtracted or filled from the shape. There are 2 types of fill-rules that you will need to know about: even-odd and non-zero.
+This is happening because of the fill-rule used on the icon. The fill-rule is an attribute used in SVG that decides what paths are inside the shape and evaluates how the shape is filled. There are 2 types of fill-rules that you will need to know about: even-odd and non-zero.
 
 Even-odd counts the amount of paths from the outside to the centre of the shape. Starting from zero, if the path is an even number, it gets filled. If the path is an odd number, it gets subtracted. 
 
 Non-zero fills any path that is drawn left to right (clockwise) and subtracts any path that is drawn from right to left (counter clockwise). 
 
-Since the release of Sketch 42, it now uses the non-zero rule by default. In Sketch, you can easily switch to use the even-odd rule by clicking the Cog icon beside Fills in the Inspector. 
+Since the release of Sketch 42, it now uses the non-zero rule by default (I thought it was a bug at first until I was forced to investigate it and learn more about the fill-rule). In Sketch, you can easily switch to use the even-odd rule by clicking the cog icon that you can find on the 'fills' bar in the Inspector. 
 
 ![Toggling Non-Zero and Even-Odd](/img/exporting-svg-icons-in-sketch/04-nonzero.gif) 
 
 However, if you want your icons to work on all Android devices, you’ll want your icons to use the non-zero rule. Fortunately, Sketch makes this easy.
 
-To fix this issue, you’ll need to expand the shapes in your layer list and reorder your paths so your most outside layer is at the bottom (you may first need to ungroup the folders a few times by pressing cmd + g). You’ll also want to change the boolean types so the empty paths are being subtracted and the fill paths are set to union. 
+To fix this issue, you’ll need to expand the shapes in your layer list and reorder your paths (you may first need to ungroup the folders a few times by pressing shift + cmd + g). You’ll also want to change the boolean operations so the empty paths are being subtracted and the fill paths are set to union. 
 
 ![Reorder layers](/img/exporting-svg-icons-in-sketch/03-rearrange-layers.gif)
 
