@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <link rel="stylesheet" href="/css/main.css">
+        <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.9.0/styles/default.min.css">
+        <link type="text/css" rel="stylesheet" href="//fast.fonts.net/cssapi/10f37207-0e28-4555-b7b4-e70a13d03463.css"/>
+        <title>Steve Schoger</title>
+    </head>
+    <body>
+        <div class="main-wrapper">
+<div class="top-border"></div>
+    <div class="constrain constrain-lg">
+    <div class="logo">
+        <a href="/">
+            <svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 64 64">
+                <path class="svg-logo" d="M32 64a32 32 0 1 1 0-64 32 32 0 0 1 0 64zm0-2a30 30 0 1 0 0-60 30 30 0 0 0 0 60zm-9-22h18a5 5 0 0 0 4-2 5 5 0 0 0-4-2H23a7 7 0 0 1-6.33-10A7 7 0 0 1 23 16h25v1a7 7 0 0 1-7 7H23a5 5 0 0 0-4 2 5 5 0 0 0 4 2h18a7 7 0 0 1 6.33 10A7 7 0 0 1 41 48H16v-1a7 7 0 0 1 7-7zm-4.97-11.5A5 5 0 0 0 23 34h18c1.9 0 3.64.76 4.9 2a5.02 5.02 0 0 0-4.9-6H23c-1.9 0-3.64-.76-4.9-2a5 5 0 0 0-.07.5zM41 42H23a5 5 0 0 0-4.9 4H41a5 5 0 0 0 4.9-6c-1.26 1.24-3 2-4.9 2zM23 22h18a5 5 0 0 0 4.9-4H23a5 5 0 0 0-4.9 6c1.26-1.24 3-2 4.9-2z"></path>
+            </svg>
+        </a>
+    </div>
+    <article>
+        <header>
+            <aside class="no-line-height">
+                <p class="text-sm sans-book text-gray-lighter m-xs-b-2">
+                    April 18, 2017
+                </p>
+            </aside>
+            <h1 class="font-size-xxl sans-book text-gray-dark no-line-height m-xs-b-6">How to make a seamless pattern in Sketch</h1>
+        </header>
+        <div class="markdown js-blog-post-body">
+            <p>Ever since I started making <a href="http://www.heropatterns.com">Hero Patterns</a>, the question I get asked to most is how to make a pattern appear seamless. Because its a visual tutorial, I decided to make a video explaining my process. Have a look:</p>
+<div class="video-embed">
+    <iframe src="https://player.vimeo.com/video/213873355" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+</div>
+<h2>Making your SVG pattern repeat with CSS</h2>
+<p>Once your pattern is <a href="/2017/03/20/my-workflow-for-exporting-cleaner-svg-icons-in-sketch">properly exported</a>, you’ll need to take a few additional steps to optimize it. </p>
+<p>Open your SVG in your favourite code editor. The first thing you’ll want to do is encode all of the angle brackets ( <code>&lt; &gt;</code> )  and the number sign ( <code>#</code> ) used for the hex code. You’ll also want to replace all of the double quotes to single quotes. For efficiency, I usually do a good ol’ find and replace with my code editor. Simply replace the <code>&lt;</code> with <code>%3C</code>, <code>&gt;</code> with <code>%3E</code> and <code>#</code> with <code>%23</code>.  </p>
+<p>Now you’ll need to encode the SVG in the data URI that looks like this: </p>
+<pre><code class="language-css">data:image/svg+xml,</code></pre>
+<p>Finally, wrap the URI in double quotes and use the url () value like you would for any repeatable background image. Have a look at the results: </p>
+<pre><code class="language-css">background-color: #000000;
+background-image: url("data:image/svg+xml,%3Csvg width='44' height='12' viewBox='0 0 44 12' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M20 12v-2L0 0v10l4 2h16zm18 0l4-2V0L22 10v2h16zM20 0v8L4 0h16zm18 0L22 8V0h16z' fill='%23FFFFFF' fill-rule='evenodd'/%3E%3C/svg%3E");</code></pre>
+<hr />
+<p>If you like the icons used in the video, you can get them, along with many others, <a href="http://www.heroicons.com">here</a>.</p>
+<p>Check out <a href="http://www.heropatterns.com">Hero Patterns</a> for loads of free patterns updated regularly. </p>        </div>
+    </article>
+    <div class="m-xs-b-6">
+        <div class="font-size-lg">
+            <a href="/" class="inline-block sans-book">Go back to home</a>
+        </div>
+    </div>
+    </div>
+</div>
+    </body>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.9.0/highlight.min.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+</html>
