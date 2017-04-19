@@ -16,7 +16,7 @@
             <div class="projects-title m-xs-b-2">Get in touch</div>
             <div class="line-seperator m-xs-b-5"></div>
             <ul class="projects no-list-style">
-                <li class="text-gray-light">Say hello: <a href="mailto:&#115;&#109;&#046;&#115;&#099;&#104;&#111;&#103;&#101;&#114;&#064;&#103;&#109;&#097;&#105;&#108;&#046;&#099;&#111;&#109;">&#115;&#109;&#046;&#115;&#099;&#104;&#111;&#103;&#101;&#114;&#064;&#103;&#109;&#097;&#105;&#108;&#046;&#099;&#111;&#109;</a></li>
+                <li><a href="mailto:&#115;&#109;&#046;&#115;&#099;&#104;&#111;&#103;&#101;&#114;&#064;&#103;&#109;&#097;&#105;&#108;&#046;&#099;&#111;&#109;">&#115;&#109;&#046;&#115;&#099;&#104;&#111;&#103;&#101;&#114;&#064;&#103;&#109;&#097;&#105;&#108;&#046;&#099;&#111;&#109;</a></li>
             </ul>
             </div>
             <div class="m-xs-b-7">
@@ -24,7 +24,10 @@
                 <div class="line-seperator m-xs-b-5"></div>
                 <ul class="projects no-list-style">
                     @foreach ($posts->take(5) as $post)
-                    <li><a href="{{ $post->url }}">{{ $post->title }}<svg width="12" height="7" viewBox="0 0 12 7" xmlns="http://www.w3.org/2000/svg"><path class="icon-link" d="M9.293 3H0v1h9.293L7.146 6.146l.708.708L11.207 3.5 7.854.146l-.708.708L9.293 3" fill-rule="evenodd"/></svg></a></li>
+                    <li class="m-xs-b-4">
+                    <p class="font-size-sm sans-book text-gray-light">{{ $post->formatDate('F j, Y') }}</p>
+                    <a class="m-xs-r-1" href="{{ $post->url }}">{{ $post->title }}<svg width="12" height="7" viewBox="0 0 12 7" xmlns="http://www.w3.org/2000/svg"><path class="icon-link" d="M9.293 3H0v1h9.293L7.146 6.146l.708.708L11.207 3.5 7.854.146l-.708.708L9.293 3" fill-rule="evenodd"/></svg></a>
+                    </li>
                     @endforeach
                 </ul>
             </div>
@@ -32,10 +35,10 @@
                 <div class="projects-title m-xs-b-2">Recent Projects</div>
                 <div class="line-seperator m-xs-b-5"></div>
                 <ul class="projects no-list-style">
-                    <li><a href="http://www.zondicons.com/">Zondicons<svg width="12" height="7" viewBox="0 0 12 7" xmlns="http://www.w3.org/2000/svg"><path class="icon-link" d="M9.293 3H0v1h9.293L7.146 6.146l.708.708L11.207 3.5 7.854.146l-.708.708L9.293 3" fill-rule="evenodd"/></svg></a></li>
-                    <li><a href="http://www.heropatterns.com/">Hero Patterns<svg width="12" height="7" viewBox="0 0 12 7" xmlns="http://www.w3.org/2000/svg"><path class="icon-link" d="M9.293 3H0v1h9.293L7.146 6.146l.708.708L11.207 3.5 7.854.146l-.708.708L9.293 3" fill-rule="evenodd"/></svg></a></li>
-                    <li><a href="/status-code-poster/">HTTP Status Code Poster<svg width="12" height="7" viewBox="0 0 12 7" xmlns="http://www.w3.org/2000/svg"><path class="icon-link" d="M9.293 3H0v1h9.293L7.146 6.146l.708.708L11.207 3.5 7.854.146l-.708.708L9.293 3" fill-rule="evenodd"/></svg></a></li>
-                    <li><a href="http://www.heroicons.com">Heroicons<svg width="12" height="7" viewBox="0 0 12 7" xmlns="http://www.w3.org/2000/svg"><path class="icon-link" d="M9.293 3H0v1h9.293L7.146 6.146l.708.708L11.207 3.5 7.854.146l-.708.708L9.293 3" fill-rule="evenodd"/></svg></a></li>
+                    <li class="m-xs-b-4"><a href="http://www.zondicons.com/">Zondicons<svg width="12" height="7" viewBox="0 0 12 7" xmlns="http://www.w3.org/2000/svg"><path class="icon-link" d="M9.293 3H0v1h9.293L7.146 6.146l.708.708L11.207 3.5 7.854.146l-.708.708L9.293 3" fill-rule="evenodd"/></svg></a></li>
+                    <li class="m-xs-b-4"><a href="http://www.heropatterns.com/">Hero Patterns<svg width="12" height="7" viewBox="0 0 12 7" xmlns="http://www.w3.org/2000/svg"><path class="icon-link" d="M9.293 3H0v1h9.293L7.146 6.146l.708.708L11.207 3.5 7.854.146l-.708.708L9.293 3" fill-rule="evenodd"/></svg></a></li>
+                    <li class="m-xs-b-4"><a href="/status-code-poster/">HTTP Status Code Poster<svg width="12" height="7" viewBox="0 0 12 7" xmlns="http://www.w3.org/2000/svg"><path class="icon-link" d="M9.293 3H0v1h9.293L7.146 6.146l.708.708L11.207 3.5 7.854.146l-.708.708L9.293 3" fill-rule="evenodd"/></svg></a></li>
+                    <li class="m-xs-b-4"><a href="http://www.heroicons.com">Heroicons<svg width="12" height="7" viewBox="0 0 12 7" xmlns="http://www.w3.org/2000/svg"><path class="icon-link" d="M9.293 3H0v1h9.293L7.146 6.146l.708.708L11.207 3.5 7.854.146l-.708.708L9.293 3" fill-rule="evenodd"/></svg></a></li>
                 </ul>
             </div>
             <div class="m-xs-b-6">
