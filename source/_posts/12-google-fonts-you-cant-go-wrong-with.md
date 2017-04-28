@@ -17,11 +17,11 @@ For awhile now, I’ve been going back to a few fonts that I find to be quite ve
 Headlines are most likely the first thing you will read when you land on a website. In fact, the overall feeling is probably established before you read the first word. A good headline font should have a lot of impact at large sizes. It can have more personality than a body font but should still communicate clearly.
 
 <a href="https://fonts.google.com/specimen/Playfair+Display">![Playfair Display][1]</a>
-[1]: /img/google-fonts-you-cant-go-wrong-with/01-playfair.jpg
+[1]: /img/12-google-fonts-you-cant-go-wrong-with/01-playfair.jpg
 <a href="https://fonts.google.com/specimen/News+Cycle">![New Cycle][2]</a>
-[2]: /img/google-fonts-you-cant-go-wrong-with/02-news.jpg
+[2]: /img/12-google-fonts-you-cant-go-wrong-with/02-news.jpg
 <a href="https://fonts.google.com/specimen/Rubik">![Rubik][3]</a>
-[3]: /img/google-fonts-you-cant-go-wrong-with/04-rubik.jpg
+[3]: /img/12-google-fonts-you-cant-go-wrong-with/04-rubik.jpg
 
 
 ##Body
@@ -29,15 +29,15 @@ Headlines are most likely the first thing you will read when you land on a websi
 A great body font is one that is super legible and really easy to digest when reading large blocks of copy. These can be used for headlines as well, but I personally don’t think they deliver quite the same impact as some of the fonts mentioned above. 
 
 <a href="https://fonts.google.com/specimen/Lato">![Lato][4]</a>
-[4]: /img/google-fonts-you-cant-go-wrong-with/05-lato.jpg
+[4]: /img/12-google-fonts-you-cant-go-wrong-with/05-lato.jpg
 <a href="https://fonts.google.com/specimen/Merriweather">![Merriweather][5]</a>
-[5]: /img/google-fonts-you-cant-go-wrong-with/06-merriweather.jpg
+[5]: /img/12-google-fonts-you-cant-go-wrong-with/06-merriweather.jpg
 <a href="https://fonts.google.com/specimen/Merriweather+Sans">![Merriweather Sans][6]</a>
-[6]: /img/google-fonts-you-cant-go-wrong-with/13-merriweather-sans.jpg
+[6]: /img/12-google-fonts-you-cant-go-wrong-with/13-merriweather-sans.jpg
 <a href="https://fonts.google.com/specimen/Source+Sans+Pro">![Source][7]</a>
-[7]: /img/google-fonts-you-cant-go-wrong-with/07-source.jpg
+[7]: /img/12-google-fonts-you-cant-go-wrong-with/07-source.jpg
 <a href="https://fonts.google.com/specimen/Libre+Baskerville">![Libre Baskerville][8]</a>
-[8]: /img/google-fonts-you-cant-go-wrong-with/09-baskerville.jpg
+[8]: /img/12-google-fonts-you-cant-go-wrong-with/09-baskerville.jpg
 
 
 ##Multipurpose
@@ -45,10 +45,10 @@ A great body font is one that is super legible and really easy to digest when re
 The criteria that makes a great multipurpose font is one that looks great at all sizes and has many weights with italics. I use these fonts more than any other. These fonts are extremely versatile and legible. If you are ever in doubt, these fonts are always a safe call. 
 
 <a href="https://fonts.google.com/specimen/Roboto">![Roboto][9]</a>
-[9]: /img/google-fonts-you-cant-go-wrong-with/10-roboto.jpg
+[9]: /img/12-google-fonts-you-cant-go-wrong-with/10-roboto.jpg
 <a href="https://fonts.google.com/specimen/Titillium+Web">![Titillium Web][10]</a>
-[10]: /img/google-fonts-you-cant-go-wrong-with/11-titillum.jpg
+[10]: /img/12-google-fonts-you-cant-go-wrong-with/11-titillum.jpg
 <a href="https://fonts.google.com/specimen/Libre+Franklin">![Franklin][11]</a>
-[11]: /img/google-fonts-you-cant-go-wrong-with/12-franklin.jpg
+[11]: /img/12-google-fonts-you-cant-go-wrong-with/12-franklin.jpg
 <a href="https://fonts.google.com/specimen/Work+Sans">![Work][12]</a>
-[12]: /img/google-fonts-you-cant-go-wrong-with/08-work.jpg
+[12]: /img/12-google-fonts-you-cant-go-wrong-with/08-work.jpg
