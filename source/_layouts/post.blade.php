@@ -7,7 +7,7 @@
     <meta name="twitter:title" content="{{ $item->twitter_title }}" />
     <meta name="twitter:description" content="{{ $item->twitter_description }}" />
     <meta name="twitter:image" content="{{ $item->twitter_image }}" />
-    <meta name="twitter:image" content="@steveschoger" />
+    <meta name="twitter:creator" content="@steveschoger" />
     @endif
 
     @if($item->twitter_large_title)
@@ -16,7 +16,7 @@
     <meta name="twitter:title" content="{{ $item->twitter_large_title }}" />
     <meta name="twitter:description" content="{{ $item->twitter_large_description }}" />
     <meta name="twitter:image" content="{{ $item->twitter_large_image }}" />
-    <meta name="twitter:image" content="@steveschoger" />
+    <meta name="twitter:creator" content="@steveschoger" />
     @endif
 @endsection
 
