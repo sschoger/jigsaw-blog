@@ -4,7 +4,7 @@ section: post
 title: "Using SVG icons with external stylesheets"
 author: Steve Schoger
 date: 2017-03-13
-twitter_image: "www.steveschoger.com/img/twitter-card.png"
+twitter_image: "https://www.steveschoger.com/img/twitter-card.png"
 twitter_title: "Using SVG icons with external stylesheets"
 twitter_description: "The more I work with SVG icons the stronger I believe that inline SVG is the best approach for implementing them."
 ---

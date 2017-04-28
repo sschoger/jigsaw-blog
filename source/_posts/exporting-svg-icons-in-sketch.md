@@ -4,7 +4,7 @@ section: post
 title: "My workflow for exporting cleaner SVG icons in Sketch"
 author: Steve Schoger
 date: 2017-03-20
-twitter_image: "www.steveschoger.com/img/twitter-card.png"
+twitter_image: "https://www.steveschoger.com/img/twitter-card.png"
 twitter_title: "My workflow for exporting cleaner SVG icons in Sketch"
 twitter_description: "Exporting clean SVG can be hard. Most graphical editing tools are capable of exporting SVG but none of them produce clean, optimized code. I’ve spent a lot of time trying to get the cleanest result, and I think I finally have a decent workflow."
 ---
