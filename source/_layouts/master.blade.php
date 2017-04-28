@@ -4,14 +4,12 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
         <meta http-equiv="x-ua-compatible" content="ie=edge">
+
+        @yield('meta')
+
         <link rel="stylesheet" href="/css/main.css">
         <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.9.0/styles/default.min.css">
         <link type="text/css" rel="stylesheet" href="//fast.fonts.net/cssapi/10f37207-0e28-4555-b7b4-e70a13d03463.css"/>
-        <meta name="twitter:card" content="summary" />
-        <meta name="twitter:site" content="@steveschoger" />
-        <meta name="twitter:title" content="/" />
-        <meta name="twitter:description" content="/" />
-        <meta name="twitter:image" content="/" />
         <title>Steve Schoger</title>
         <script>
             (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){

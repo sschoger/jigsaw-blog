@@ -4,6 +4,9 @@ section: post
 title: "12 Google fonts you can’t go wrong with"
 author: Steve Schoger
 date: 2017-04-26
+twitter_image: "https://steveschoger.com/img/twitter-card.png"
+twitter_title: "12 Google fonts you can’t go wrong with"
+twitter_description: "Google Fonts is my number one go to source when it comes to free fonts to use on the web. However, the selection on Google Fonts has gotten big. Almost *too* big to the point where its hard to filter out the bad from the good. "
 ---
 
 

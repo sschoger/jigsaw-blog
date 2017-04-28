@@ -1,5 +1,25 @@
 @extends('_layouts.master')
 
+@section('meta')
+    @if($item->twitter_title)
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:site" content="@steveschoger" />
+    <meta name="twitter:title" content="{{ $item->twitter_title }}" />
+    <meta name="twitter:description" content="{{ $item->twitter_description }}" />
+    <meta name="twitter:image" content="{{ $item->twitter_image }}" />
+    <meta name="twitter:image" content="@steveschoger" />
+    @endif
+
+    @if($item->twitter_large_title)
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:site" content="@steveschoger" />
+    <meta name="twitter:title" content="{{ $item->twitter_large_title }}" />
+    <meta name="twitter:description" content="{{ $item->twitter_large_description }}" />
+    <meta name="twitter:image" content="{{ $item->twitter_large_image }}" />
+    <meta name="twitter:image" content="@steveschoger" />
+    @endif
+@endsection
+
 @section('body')
 <div class="main-wrapper">
 <div class="top-border"></div>
