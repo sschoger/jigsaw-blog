@@ -22,20 +22,14 @@ $font-size-xs: (12 / 16)+rem; // 12px
 .font-size-sm { font-size: $font-size-sm; }
 .font-size-xs { font-size: $font-size-xs; }
 
-$sans-book: 'ITC Franklin Gothic LT W01 Bk'; 
-$sans-bold: 'ITC Franklin Gothic LT W01 Dm'; 
-$sans-italic: 'ITC Franklin Gothic LT W01 Md';
-
-$serif-book: 'FreightText W01 Book';
-$serif-italic: 'FreightText W01 Book Italic';
+$sans-book: 'ITC Franklin Gothic LT W01 Bk', -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif; 
+$sans-bold: 'ITC Franklin Gothic LT W01 Dm', -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif; 
+$sans-italic: 'ITC Franklin Gothic LT W01BkIt', -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
 
 
 .sans-book { font-family: $sans-book; }
 .sans-bold { font-family: $sans-bold; }
 .sans-italic { font-family: $sans-italic; }
-
-.serif-book { font-family: $serif-book; }
-.serif-italic { font-family: $serif-italic; }
 
 $text-gray-lighter: #aeaeae;
 $text-gray-light: #7C7C7C;
@@ -110,6 +104,10 @@ p, li{
   color: $text-gray;
   font-size: $font-size-lg;
   }
+
+em {
+  font-family: $sans-italic;
+}
 
 a {
   color: #4483D9;
