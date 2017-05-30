@@ -1,14 +1,13 @@
 ---
 extends: _layouts.post
 section: post
-title: "My workflow for exporting cleaner SVG icons in Sketch"
+title: "Exporting Cleaner SVG from Sketch"
 author: Steve Schoger
 date: 2017-03-20
 twitter_image: "https://www.steveschoger.com/img/twitter-card.png"
-twitter_title: "My workflow for exporting cleaner SVG icons in Sketch"
+twitter_title: "Exporting Cleaner SVG from Sketch"
 twitter_description: "Exporting clean SVG can be hard. Most graphical editing tools are capable of exporting SVG but none of them produce clean, optimized code. I’ve spent a lot of time trying to get the cleanest result, and I think I finally have a decent workflow."
 ---
-
 
 Exporting clean SVG can be hard. Most graphical editing tools are capable of exporting SVG but none of them produce clean, optimized code. I’ve spent a lot of time trying to get the cleanest result, and I think I finally have a decent workflow.  Unfortunately, it involves more than one tool.
 
@@ -16,7 +15,7 @@ If you’re like me, you like to design everything in Sketch. Ultimately, for me
 
 Unfortunately, like many graphical editing tools, Sketch has it’s fair share of bugs. As a result, you need to jump out of Sketch to get certain tasks done. For example, I like to outline all of my paths in to shapes and even though I have seen much improvement with the pathfinder tools in Sketch, they still have a long way to go. If you often work with complex shapes, you may get unexpected results like this:
 
-![Icon outline results in Sketch](/img/exporting-svg-icons-in-sketch/01-outline-results.png)
+![Icon outline results in Sketch](/img/170320-exporting-svg/01-outline-results.png)
 
 For this reason you’ll need to get out of Sketch to get the expected results. My go to tool for this has been [Figma](https://www.figma.com). Figma makes it super easy to import Sketch files and their boolean operations are nearly flawless. 
 
@@ -24,7 +23,7 @@ Once all of the shapes are merged, you’ll want to bring them back into Sketch 
 
 If you’re using the latest version of Sketch (42) and depending on the shape and how your drew it, you may notice when you import your icon, some areas maybe filled in like this:
 
-![Sketch import results](/img/exporting-svg-icons-in-sketch/02-sketch-import-results.png)
+![Sketch import results](/img/170320-exporting-svg/02-sketch-import-results.png)
 
 This is happening because of the fill-rule used on the icon. The fill-rule is an attribute used in SVG that decides what paths are inside the shape and evaluates how the shape is filled. There are 2 types of fill-rules that you will need to know about: even-odd and non-zero.
 
@@ -34,13 +33,13 @@ Non-zero fills any path that is drawn left to right (clockwise) and subtracts an
 
 Since the release of Sketch 42, it now uses the non-zero rule by default (I thought it was a bug at first until I was forced to investigate it and learn more about the fill-rule). In Sketch, you can easily switch to use the even-odd rule by clicking the cog icon that you can find on the 'fills' bar in the Inspector. 
 
-![Toggling Non-Zero and Even-Odd](/img/exporting-svg-icons-in-sketch/04-nonzero.gif) 
+![Toggling Non-Zero and Even-Odd](/img/170320-exporting-svg/04-nonzero.gif) 
 
 However, if you want your icons to work on all Android devices, you’ll want your icons to use the non-zero rule. Fortunately, Sketch makes this easy.
 
 To fix this issue, you’ll need to expand the shapes in your layer list and reorder your paths (you may first need to ungroup the folders a few times by pressing shift + cmd + g). You’ll also want to change the boolean operations so the empty paths are being subtracted and the fill paths are set to union. 
 
-![Reorder layers](/img/exporting-svg-icons-in-sketch/03-rearrange-layers.gif)
+![Reorder layers](/img/170320-exporting-svg/03-rearrange-layers.gif)
 
 Now you’re ready to export. If you don’t already use the [SVGO plugin](https://www.sketchapp.com/extensions/plugins/svgo-compressor/), head over to the [Sketch extensions](https://www.sketchapp.com/extensions/) page and get it. This will clean up your SVG substantially. 
 

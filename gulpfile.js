@@ -9,5 +9,6 @@ elixir(function(mix) {
     var env = argv.e || argv.env || 'local';
 
     mix.sass('main.scss')
+    	.exec('rm -rf ./**/*/.DS_Store')
         .exec('jigsaw build ' + env, ['./source/*', './source/**/*', '!./source/_assets/**/*']);
 });

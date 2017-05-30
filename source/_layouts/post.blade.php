@@ -38,7 +38,7 @@
                     {{ $item->formatDate('F j, Y') }}
                 </p>
             </aside>
-            <h1 class="font-size-xxl sans-book text-gray-dark no-line-height m-xs-b-6">{{ $item->title }}</h1>
+            <h1 class="font-size-xxl sans-book text-gray-dark m-xs-b-6">{{ $item->title }}</h1>
         </header>
         <div class="markdown js-blog-post-body">
             @yield('post')

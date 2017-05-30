@@ -1,7 +1,7 @@
 ---
 extends: _layouts.post
 section: post
-title: "Using SVG icons with external stylesheets"
+title: "Styling SVG with CSS"
 author: Steve Schoger
 date: 2017-03-13
 twitter_image: "https://www.steveschoger.com/img/twitter-card.png"
@@ -23,7 +23,7 @@ Say you have a set of SVG icons, each with multiple paths and you want match the
 
 Have a look at the example icon below from my [Heroicons](http://www.heroicons.com) set. As you can see, the icon has multiple paths for different components of the icon. When you export this icon to a SVG, each path is preserved in the code so you can style them individually. Layers are ordered in the code as they are in your graphical editing tool; the top layer should be the last path in the SVG code. In this example, the last path would be the dark outline of the house.
 
-![Icon with multiple paths](/img/using-svg-icons-with-external-stylesheets/01-multiple-paths.png) 
+![Icon with multiple paths](/img/170313-styling-svg/01-multiple-paths.png) 
 
 Depending on how you created the icons your SVG code may contain a few different properties: fill, fill-opacity, stroke, stroke-width, etc. If your using Sketch (like me) and have installed the [SVGO plugin](https://www.sketchapp.com/extensions/plugins/svgo-compressor/) (you should) your code for each path might look something like this:
 
@@ -68,7 +68,7 @@ To make this work with an external stylesheet you’ll need to give each path a 
 
 Have a look at the results:
 
-![Icon with accent colors](/img/using-svg-icons-with-external-stylesheets/02-color-results.png)
+![Icon with accent colors](/img/170313-styling-svg/02-color-results.png)
 
 This approach gives you much more creative freedom and enables you with easily align your icons to your visual identity as it evolves. Take this concept even further by adding hover states, animations and gradients to create a better emotional experience for your users.  
 
