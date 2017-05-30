@@ -46,7 +46,7 @@
                     March 13, 2017
                 </p>
             </aside>
-            <h1 class="font-size-xxl sans-book text-gray-dark no-line-height m-xs-b-6">Using SVG icons with external stylesheets</h1>
+            <h1 class="font-size-xxl sans-book text-gray-dark m-xs-b-6">Styling SVG with CSS</h1>
         </header>
         <div class="markdown js-blog-post-body">
             <p>The more I work with SVG icons the stronger I believe that inline SVG is the best approach for implementing them. The primary reason for this is that inline SVG is currently the best option if you want to style your icons using an external stylesheet. There are 2 major advantages to this:</p>
@@ -57,7 +57,7 @@
 <p>Let’s put this into practice: </p>
 <p>Say you have a set of SVG icons, each with multiple paths and you want match the color palette to the rest of the site that you are working on. Including them I’m the same CSS would be far more efficient, especially if you’re designing in code and making frequent changes to find just the right color palette. Fortunately, achieving this can be quite simple. </p>
 <p>Have a look at the example icon below from my <a href="http://www.heroicons.com">Heroicons</a> set. As you can see, the icon has multiple paths for different components of the icon. When you export this icon to a SVG, each path is preserved in the code so you can style them individually. Layers are ordered in the code as they are in your graphical editing tool; the top layer should be the last path in the SVG code. In this example, the last path would be the dark outline of the house.</p>
-<p><img src="/img/using-svg-icons-with-external-stylesheets/01-multiple-paths.png" alt="Icon with multiple paths" /> </p>
+<p><img src="/img/170313-styling-svg/01-multiple-paths.png" alt="Icon with multiple paths" /> </p>
 <p>Depending on how you created the icons your SVG code may contain a few different properties: fill, fill-opacity, stroke, stroke-width, etc. If your using Sketch (like me) and have installed the <a href="https://www.sketchapp.com/extensions/plugins/svgo-compressor/">SVGO plugin</a> (you should) your code for each path might look something like this:</p>
 <pre><code class="language-xml">&lt;svg xmlns="http://www.w3.org/2000/svg" width="100px" height="100px" viewBox="0 0 100 100" class="heroicon-home heroicon heroicon-lg"&gt;
     &lt;g fill-rule="evenodd"&gt;
@@ -87,7 +87,7 @@
 .heroicon-component-accent {fill:#7ACFC0;}
 .heroicon-shadows {fill:#626262; opacity:0.4; }</code></pre>
 <p>Have a look at the results:</p>
-<p><img src="/img/using-svg-icons-with-external-stylesheets/02-color-results.png" alt="Icon with accent colors" /></p>
+<p><img src="/img/170313-styling-svg/02-color-results.png" alt="Icon with accent colors" /></p>
 <p>This approach gives you much more creative freedom and enables you with easily align your icons to your visual identity as it evolves. Take this concept even further by adding hover states, animations and gradients to create a better emotional experience for your users.  </p>
 <hr />
 <p>If you like the icon used in the article, you can it, along with many others, <a href="http://www.heroicons.com">here</a>. </p>        </div>

@@ -7,7 +7,7 @@
 
                 <meta name="twitter:card" content="summary" />
     <meta name="twitter:site" content="@steveschoger" />
-    <meta name="twitter:title" content="My workflow for exporting cleaner SVG icons in Sketch" />
+    <meta name="twitter:title" content="Exporting Cleaner SVG from Sketch" />
     <meta name="twitter:description" content="Exporting clean SVG can be hard. Most graphical editing tools are capable of exporting SVG but none of them produce clean, optimized code. I’ve spent a lot of time trying to get the cleanest result, and I think I finally have a decent workflow." />
     <meta name="twitter:image" content="https://www.steveschoger.com/img/twitter-card.png" />
     <meta name="twitter:creator" content="@steveschoger" />
@@ -46,25 +46,25 @@
                     March 20, 2017
                 </p>
             </aside>
-            <h1 class="font-size-xxl sans-book text-gray-dark no-line-height m-xs-b-6">My workflow for exporting cleaner SVG icons in Sketch</h1>
+            <h1 class="font-size-xxl sans-book text-gray-dark m-xs-b-6">Exporting Cleaner SVG from Sketch</h1>
         </header>
         <div class="markdown js-blog-post-body">
             <p>Exporting clean SVG can be hard. Most graphical editing tools are capable of exporting SVG but none of them produce clean, optimized code. I’ve spent a lot of time trying to get the cleanest result, and I think I finally have a decent workflow.  Unfortunately, it involves more than one tool.</p>
 <p>If you’re like me, you like to design everything in Sketch. Ultimately, for me, it just come down to preference. I have developed a good workflow in Sketch, I know all the keyboard shortcuts, and it’s just the tool that I am most comfortable with. </p>
 <p>Unfortunately, like many graphical editing tools, Sketch has it’s fair share of bugs. As a result, you need to jump out of Sketch to get certain tasks done. For example, I like to outline all of my paths in to shapes and even though I have seen much improvement with the pathfinder tools in Sketch, they still have a long way to go. If you often work with complex shapes, you may get unexpected results like this:</p>
-<p><img src="/img/exporting-svg-icons-in-sketch/01-outline-results.png" alt="Icon outline results in Sketch" /></p>
+<p><img src="/img/170320-exporting-svg/01-outline-results.png" alt="Icon outline results in Sketch" /></p>
 <p>For this reason you’ll need to get out of Sketch to get the expected results. My go to tool for this has been <a href="https://www.figma.com">Figma</a>. Figma makes it super easy to import Sketch files and their boolean operations are nearly flawless. </p>
 <p>Once all of the shapes are merged, you’ll want to bring them back into Sketch because exporting SVG from Figma doesn’t give you the cleanest results. </p>
 <p>If you’re using the latest version of Sketch (42) and depending on the shape and how your drew it, you may notice when you import your icon, some areas maybe filled in like this:</p>
-<p><img src="/img/exporting-svg-icons-in-sketch/02-sketch-import-results.png" alt="Sketch import results" /></p>
+<p><img src="/img/170320-exporting-svg/02-sketch-import-results.png" alt="Sketch import results" /></p>
 <p>This is happening because of the fill-rule used on the icon. The fill-rule is an attribute used in SVG that decides what paths are inside the shape and evaluates how the shape is filled. There are 2 types of fill-rules that you will need to know about: even-odd and non-zero.</p>
 <p>Even-odd counts the amount of paths from the outside to the centre of the shape. Starting from zero, if the path is an even number, it gets filled. If the path is an odd number, it gets subtracted. </p>
 <p>Non-zero fills any path that is drawn left to right (clockwise) and subtracts any path that is drawn from right to left (counter clockwise). </p>
 <p>Since the release of Sketch 42, it now uses the non-zero rule by default (I thought it was a bug at first until I was forced to investigate it and learn more about the fill-rule). In Sketch, you can easily switch to use the even-odd rule by clicking the cog icon that you can find on the 'fills' bar in the Inspector. </p>
-<p><img src="/img/exporting-svg-icons-in-sketch/04-nonzero.gif" alt="Toggling Non-Zero and Even-Odd" /> </p>
+<p><img src="/img/170320-exporting-svg/04-nonzero.gif" alt="Toggling Non-Zero and Even-Odd" /> </p>
 <p>However, if you want your icons to work on all Android devices, you’ll want your icons to use the non-zero rule. Fortunately, Sketch makes this easy.</p>
 <p>To fix this issue, you’ll need to expand the shapes in your layer list and reorder your paths (you may first need to ungroup the folders a few times by pressing shift + cmd + g). You’ll also want to change the boolean operations so the empty paths are being subtracted and the fill paths are set to union. </p>
-<p><img src="/img/exporting-svg-icons-in-sketch/03-rearrange-layers.gif" alt="Reorder layers" /></p>
+<p><img src="/img/170320-exporting-svg/03-rearrange-layers.gif" alt="Reorder layers" /></p>
 <p>Now you’re ready to export. If you don’t already use the <a href="https://www.sketchapp.com/extensions/plugins/svgo-compressor/">SVGO plugin</a>, head over to the <a href="https://www.sketchapp.com/extensions/">Sketch extensions</a> page and get it. This will clean up your SVG substantially. </p>
 <p>Open the SVG file in your editor to make sure your have the expected results. The default settings for the SVGO plugin removes the width and height which I like to keep.  I also like to include the full close tags on the paths so it doesn’t interfere with the auto-close tags later on in my code. Here is what the results look like using the example icon above: </p>
 <pre><code class="language-xml">&lt;svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 100 100"&gt;
