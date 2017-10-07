@@ -1,11 +1,11 @@
 ---
 extends: _layouts.post
 section: post
-title: "Designing KiteTail’s checkout ‘Thank You’ page"
+title: "Designing KiteTail’s Checkout ‘Thank You’ Page"
 author: Steve Schoger
 date: 2017-05-30
 twitter_image: "https://www.steveschoger.com/img/twitter-card.png"
-twitter_title: "Designing KiteTail’s checkout ‘Thank You’ page"
+twitter_title: "Designing KiteTail’s Checkout ‘Thank You’ Page"
 twitter_description: "When we began thinking about the design of KiteTail’s ‘Thank you’ page, we had 2 primary goals in mind."
 ---
 

@@ -1,11 +1,11 @@
 ---
 extends: _layouts.post
 section: post
-title: "How to make a seamless pattern in Sketch"
+title: "How to Make a Seamless Pattern in Sketch"
 author: Steve Schoger
 date: 2017-04-19
 twitter_image: "https://www.steveschoger.com/img/twitter-card.png"
-twitter_title: "How to make a seamless pattern in Sketch"
+twitter_title: "How to Make a Seamless Pattern in Sketch"
 twitter_description: "Ever since I started making Hero Patterns, the question I get asked to most is how to make a pattern appear seamless. Because its a visual tutorial, I decided to make a video explaining my process."
 ---
 

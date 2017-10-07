@@ -4,7 +4,7 @@
 
 $font-size-xxjumbo: (64 / 16)+rem; // 64px
 $font-size-xjumbo: (45 / 16)+rem; // 45px
-$font-size-jumbo: (36 / 16)+rem; // 36px
+$font-size-jumbo: (32 / 16)+rem; // 36px
 $font-size-xxl: (24 / 16)+rem; // 24px
 $font-size-xl: (20 / 16)+rem; // 20px
 $font-size-lg: (18 / 16)+rem; // 18px
@@ -13,8 +13,8 @@ $font-size-sm: (14 / 16)+rem; // 14px
 $font-size-xs: (12 / 16)+rem; // 12px
 
 .font-size-xxjumbo { font-size: $font-size-xxjumbo; }
-.font-size-xjumbo { font-size: $font-size-xjumbo; }
-.font-size-jumbo { font-size: $font-size-jumbo; }
+.font-size-xjumbo { font-size: $font-size-xjumbo;}
+.font-size-jumbo { font-size: $font-size-jumbo; line-height: 1.2em;}
 .font-size-xxl { font-size: $font-size-xxl; }
 .font-size-xl { font-size: $font-size-xl; }
 .font-size-lg { font-size: $font-size-lg; }
@@ -32,9 +32,15 @@ $sans-italic: 'ITC Franklin Gothic LT W01BkIt', -apple-system, BlinkMacSystemFon
 .sans-italic { font-family: $sans-italic; }
 
 $text-gray-lighter: #aeaeae;
-$text-gray-light: #7C7C7C;
+$text-gray-light: #6D6D6D;
 $text-gray: #4f4f4f;
 $text-gray-dark: #232323;
+
+
+$text-color-green: #0EA651;
+
+
+
 
 .text-gray-lighter{ color: $text-gray-lighter;}
 .text-gray-light{ color: $text-gray-light;}
@@ -60,9 +66,9 @@ h1, h2, h3, h4{
     line-height: 1.5em;
   }
 
-h1{font-size: $font-size-xxl;}
-h2{font-size: $font-size-xl;}
-h3{font-size: $font-size-lg;}
+h1{font-size: $font-size-jumbo;}
+h2{font-size: $font-size-xxl;}
+h3{font-size: $font-size-xl;}
 h4{font-size: $font-size-base;}
 
 .main-wrapper {
@@ -101,7 +107,7 @@ p, li{
   font-family: $sans-book;
   margin-top: 0;
   font-weight: 400;
-  line-height: 1.6;
+  line-height: 1.5;
   color: $text-gray;
   font-size: $font-size-lg;
   }
@@ -145,7 +151,7 @@ a .social-icon:hover {
 
 .markdown {
   h2{
-  margin-bottom: 1.5em;
+  margin-top: 1.5em;
   }
 
   p{
@@ -153,7 +159,7 @@ a .social-icon:hover {
   margin-top: 0;
   margin-bottom: 1.5em;
   font-weight: 400;
-  line-height: 1.6;
+  line-height: 1.5;
   color: $text-gray-light;
   font-size: $font-size-lg;
   }
