@@ -17,7 +17,7 @@ I’ve been working on this set for a while and decided to make them available f
 
 Each icon in this set of 104 glyphs is designed in a 24 x 24 pixel grid and maintain a consistent visual proportion when next to each other.
 
-<a href="https://github.com/sschoger/heroicons-ui" target="_blank">Get the icons on Github</a>
+<a href="https://github.com/sschoger/heroicons-ui" target="_blank">Get the icons on GitHub</a>
 
 I plan to continue growing this set so feel free to sign up below to get notified when updates are available.  
 
