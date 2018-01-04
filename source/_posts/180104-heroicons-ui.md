@@ -4,7 +4,7 @@ section: post
 title: "Introducing Heroicons UI"
 author: Steve Schoger
 date: 2018-01-04
-twitter_large_image: "https://www.steveschoger.com/img/180104-heroicons-ui/twitter-card.png"
+twitter_large_image: "http://www.steveschoger.com/img/180104-heroicons-ui/twitter-card.png"
 twitter_large_title: "Introducing Heroicons UI"
 twitter_large_description: "A set of 104 free premium SVG icons"
 ---
