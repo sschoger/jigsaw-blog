@@ -13,7 +13,7 @@ twitter_description: "A set of 104 free premium SVG icons"
 
 Heroicons UI make the perfect fit for any in-app UI. Their soft edges and consistent 2 pixel stroke give them a friendly pesonality that work great for both professional and playful UI's.
 
-I’ve been working on this set for a while and decided to make them available for free under the <a href="https://creativecommons.org/licenses/by/2.0/ca/" target="_blank">CC BY 4.0 license</a>.
+I’ve been working on this set for a while and decided to make them available for free under the <a href="https://opensource.org/licenses/MIT" target="_blank">MIT license</a>.
 
 Each icon in this set of 104 glyphs is designed in a 24 x 24 pixel grid and maintain a consistent visual proportion when next to each other.
 
