@@ -13,11 +13,11 @@ twitter_description: "A set of 100 free premium SVG icons"
 
 Heroicons UI make the perfect fit for any in-app UI. Their soft edges and consistent 2 pixel stroke give them a friendly pesonality that work great for both professional and playful UI's.
 
-I’ve been working on this set for a while and decided to make them available for free under the <a href="https://creativecommons.org/licenses/by/2.0/ca/">CC BY 4.0 license</a>.
+I’ve been working on this set for a while and decided to make them available for free under the <a href="https://creativecommons.org/licenses/by/2.0/ca/" target="_blank">CC BY 4.0 license</a>.
 
 Each icon in this set of 100 glyphs is designed in a 24 x 24 pixel grid and maintain a consistent visual proportion when next to each other.
 
-<a href="https://github.com/sschoger/heroicons-ui">Get the icons on Github</a>
+<a href="https://github.com/sschoger/heroicons-ui" target="_blank">Get the icons on Github</a>
 
 I plan to continue growing this set so feel free to sign up below to get notified when updates are available.  
 
@@ -41,4 +41,4 @@ I plan to continue growing this set so feel free to sign up below to get notifie
     </form>
 </div>
 
-Psst...if you're looking for an icon set more suitable for your marketing page, check out <a href="http://www.heroicons.com/">Heroicons for marketing</a>, a unique set of icons for your marketing website that make it easy to customize with CSS to better align to your brand. They make a great companion to Heroicons UI. 
+Psst...if you're looking for an icon set more suitable for your marketing page, check out <a href="http://www.heroicons.com/" target="_blank">Heroicons for marketing</a>, a unique set of icons for your marketing website that make it easy to customize with CSS to better align to your brand. They make a great companion to Heroicons UI. 
