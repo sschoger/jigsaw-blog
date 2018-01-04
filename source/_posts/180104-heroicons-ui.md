@@ -15,7 +15,7 @@ Heroicons UI make the perfect fit for any in-app UI. Their soft edges and consis
 
 I’ve been working on this set for a while and decided to make them available for free under the <a href="https://creativecommons.org/licenses/by/2.0/ca/" target="_blank">CC BY 4.0 license</a>.
 
-Each icon in this set of 100 glyphs is designed in a 24 x 24 pixel grid and maintain a consistent visual proportion when next to each other.
+Each icon in this set of 104 glyphs is designed in a 24 x 24 pixel grid and maintain a consistent visual proportion when next to each other.
 
 <a href="https://github.com/sschoger/heroicons-ui" target="_blank">Get the icons on Github</a>
 
