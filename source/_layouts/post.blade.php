@@ -34,11 +34,11 @@
     <article>
         <header>
             <aside class="no-line-height">
-                <p class="text-sm sans-book text-gray-lighter m-xs-b-2">
+                <p class="text-sm font-sans font-normal text-gray-lighter m-xs-b-2">
                     {{ $item->formatDate('F j, Y') }}
                 </p>
             </aside>
-            <h1 class="font-size-jumbo sans-book text-gray-dark m-xs-b-6">{{ $item->title }}</h1>
+            <h1 class="font-size-jumbo font-sans font-normal text-gray-dark m-xs-b-6">{{ $item->title }}</h1>
         </header>
         <div class="markdown js-blog-post-body">
             @yield('post')
@@ -46,7 +46,7 @@
     </article>
     <div class="m-xs-b-6">
         <div class="font-size-lg">
-            <a href="/" class="inline-block sans-book">Go back to home</a>
+            <a href="/" class="inline-block font-sans font-normal">Go back to home</a>
         </div>
     </div>
     </div>

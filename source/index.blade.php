@@ -25,7 +25,7 @@
                 <ul class="projects no-list-style">
                     @foreach ($posts->take(5) as $post)
                     <li class="m-xs-b-4">
-                    <p class="font-size-sm sans-book text-gray-light">{{ $post->formatDate('F j, Y') }}</p>
+                    <p class="font-size-sm font-sans font-bold text-gray-lighter">{{ $post->formatDate('F j, Y') }}</p>
                     <a class="m-xs-r-1" href="{{ $post->url }}">{{ $post->title }}<svg width="12" height="7" viewBox="0 0 12 7" xmlns="http://www.w3.org/2000/svg"><path class="icon-link" d="M9.293 3H0v1h9.293L7.146 6.146l.708.708L11.207 3.5 7.854.146l-.708.708L9.293 3" fill-rule="evenodd"/></svg></a>
                     </li>
                     @endforeach
